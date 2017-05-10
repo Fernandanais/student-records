@@ -1,13 +1,13 @@
-function campoNoVacio(mensaje){
-  //Solicita mediante un prompt con el mensaje hasta que no sea vacío
-  //Retorna el valor ingresado en el prompt
-  var salida = "";
-  do {
-    salida = prompt(mensaje);
-  }
+var studentsList = [];
 
-  while (salida == "");
-  return salida;
+function campoNoVacio(mensaje){
+    var salida = "";
+    do {
+      salida = prompt(mensaje);
+    }
+
+    while (salida == "");
+    return salida;
 }
 
 function botonAddStudent(){
@@ -16,13 +16,26 @@ function botonAddStudent(){
     var porcentajeEmocional = campoNoVacio("¿Cual es tu porcentaje socio-emocional?");
 
     var Estudiante = new Student(nombre,porcentajeTecnico,porcentajeEmocional);
+
+    document.getElementById("students").innerHTML = "";
+    printOneStudent(Estudiante);
+
+    studentsList.push(Estudiante);
 }
 
-function imprimir(){
-    var divArr = document.getElementById("  ");
-    divArr.innerHTML = " ";
-    Estudiante.forEach(function(value){
-   divArr.innerHTML += "Nombre: " + value.nombre + "Porcentaje Técnico: " + value.porcentajeTecnico + "Porcentaje HSE: " + value.porcentajeEmocional + "Estado:" + value.status;
+function printOneStudent(Estudiante){
+    var student = document.getElementById("students");
+    student.innerHTML += "<div><p><strong>Nombre:</strong> " + Estudiante.nombre + "</p>" +
+        "<p><strong>Porcentaje Técnico:</strong> " + Estudiante.porcentajeTecnico + "</p>" +
+        "<p><strong>Porcentaje HSE:</strong> " + Estudiante.porcentajeEmocional + "</p>" +
+        "<p><strong>Estado:</strong> " + Estudiante.status + "</p></div>";
+}
+
+function botonPrintAll(){
+    var students = document.getElementById("students");
+    students.innerHTML = "";
+    studentsList.forEach(function(Estudiante){
+        printOneStudent(Estudiante);
     });
 }
 
