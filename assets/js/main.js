@@ -18,9 +18,14 @@ function botonAddStudent(){
     var Estudiante = new Student(nombre,porcentajeTecnico,porcentajeEmocional);
 }
 
+function printTodas(){
+    alert("Imprimiendo Estudiantes");
+}
+
 function Student(nombre,porcentajeTecnico,porcentajeEmocional){
     this.nombre = nombre;
     this.porcentajeTecnico = porcentajeTecnico;
     this.porcentajeEmocional = porcentajeEmocional;
     this.status = "active";
 }
+
