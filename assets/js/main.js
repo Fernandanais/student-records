@@ -18,7 +18,7 @@ function botonAddStudent(){
     var Estudiante = new Student(nombre,porcentajeTecnico,porcentajeEmocional);
 }
 
-function printAll(){
+function imprimir(){
     var divArr = document.getElementById("  ");
     divArr.innerHTML = " ";
     Estudiante.forEach(function(value){
