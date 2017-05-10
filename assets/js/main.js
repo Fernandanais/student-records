@@ -2,10 +2,10 @@ function campoNoVacio(mensaje){
   //Solicita mediante un prompt con el mensaje hasta que no sea vacío
   //Retorna el valor ingresado en el prompt
   var salida = "";
-  do { 
+  do {
     salida = prompt(mensaje);
   }
-  
+
   while (salida == "");
   return salida;
 }
@@ -18,8 +18,12 @@ function botonAddStudent(){
     var Estudiante = new Student(nombre,porcentajeTecnico,porcentajeEmocional);
 }
 
-function printTodas(){
-    alert("Imprimiendo Estudiantes");
+function imprimir(){
+    var divArr = document.getElementById("  ");
+    divArr.innerHTML = " ";
+    Estudiante.forEach(function(value){
+   divArr.innerHTML += "Nombre: " + value.nombre + "Porcentaje Técnico: " + value.porcentajeTecnico + "Porcentaje HSE: " + value.porcentajeEmocional + "Estado:" + value.status;
+    });
 }
 
 function Student(nombre,porcentajeTecnico,porcentajeEmocional){
@@ -28,4 +32,3 @@ function Student(nombre,porcentajeTecnico,porcentajeEmocional){
     this.porcentajeEmocional = porcentajeEmocional;
     this.status = "active";
 }
-
