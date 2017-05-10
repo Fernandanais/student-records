@@ -1,23 +1,14 @@
-//Arreglo de objetos
-var estudiantes [
-{
-  nombre: Susana,
-  techSkills: 80%,
-  lifeSkills: 80%,
-  status: active
-  
-},
-{
-  nombre: Belen,
-  techSkills: 90%,
-  lifeSkills: 90%,
-  status: active
-},
-{
-  nommbre: Allison,
-  techSkills: 85%,
-  lifeSkills: 85%,
-  status: active
+function botonAddStudent(){
+    var nombre = prompt("¿Cual es tu nombre?");
+    var porcentajeTecnico = prompt("¿Cual es tu porcentaje tecnico?");
+    var porcentajeEmocional = prompt("¿Cual es tu porcentaje socio-emocional?");
 
-},
-];
+    var Estudiante = new Student(nombre,porcentajeTecnico,porcentajeEmocional);
+}
+
+function Student(nombre,porcentajeTecnico,porcentajeEmocional){
+    this.nombre = nombre;
+    this.porcentajeTecnico = porcentajeTecnico;
+    this.porcentajeEmocional = porcentajeEmocional;
+    this.status = "active";
+}
