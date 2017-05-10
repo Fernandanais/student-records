@@ -1,3 +1,42 @@
 body{
 	font-family: arial;
+	margin: 0px;
+}
+
+header{
+	text-align: center;	
+	margin-bottom: 10px;
+	background-color: #fff;
+	border-bottom : 4px outset #000;
+}
+
+header img{
+	width: 150px;
+	float: center;
+	margin-top: 20px;	
+}
+
+h1{
+	color : #000;
+}
+
+footer{
+	text-align: center;	
+	margin-bottom: 10px;
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	border-top : 4px outset #66FFFF;
+}
+
+footer img{
+	width: 80px;
+	float: center;
+	margin-top: 20px;	
+}
+
+h5{
+	float: left;
+	margin-top: 75px;
 }
