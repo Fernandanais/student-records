@@ -21,6 +21,23 @@ h1{
 	color : #000;
 }
 
+button
+  {
+  text-align:center;
+	text-decoration:none;    
+	background-color: black; 
+  color: #FFF;
+  transition: backgroung-color, 2s;
+  }
+  
+ button:hover
+  {
+	border-radius:30px;
+  background-color: #09F;
+	color: #CCC;
+  
+  }
+
 button{
 	background-color: #000;
 	color: #66FFFF;
